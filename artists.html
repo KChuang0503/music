@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap-grid -->
+    <link rel="styleshe。et" href="./bootstrap/css/bootstrap-grid.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/all-setup.css">
+
+
+    <style>
+        /* body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: sans-serif;
+        } */
+
+        h1 {
+            color: var(--myblue);
+            text-align: center;
+        }
+
+        /* nav */
+        .nav .row {
+            justify-content: space-between;
+        }
+
+        .nav .logo {
+            margin: 15px 0 15px 50px;
+            width: 10%;
+            min-width: 100px;
+        }
+
+        .nav .logo img {
+            width: 100%;
+        }
+
+        /* menu */
+        .menu-list {
+            display: flex;
+            margin: 15px 50px 15px 0;
+        }
+
+        .menu-list a {
+            text-decoration: none;
+            margin: 0 15px;
+            color: var(--myblue);
+        }
+
+
+        /* main */
+        main .grid-container {
+            columns: 4 200px;
+            column-gap: 1.5rem;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        main .grid-container div {
+            width: 150px;
+            margin: 0 3rem 1.5rem 0;
+            display: inline-block;
+            width: 100%;
+            /* border: solid 2px black; */
+            padding: 5px;
+            /* box-shadow: 5px 5px 5px rgba(26, 29, 31, 0.1); */
+            transition: all 0.25s ease-in-out;
+        }
+
+        main .grid-container div:hover img {
+            filter: grayscale(0);
+        }
+
+        main .grid-container div:hover {
+            border-color: coral;
+        }
+
+        main .grid-container div img {
+            width: 100%;
+            filter: grayscale(100%);
+            transition: all 0.5s ease-in-out;
+        }
+
+        main .grid-container div p {
+            margin: 25px 0;
+            padding: 0;
+            text-align: center;
+            font-style: italic;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav">
+            <div class="container">
+                <div class="row">
+                    <div class="logo">
+                        <a href="./index.html">
+                            <img src="./assets/images/logo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <ul class="menu-list">
+                            <li>
+                                <a href="./index.html" class="Releases">Releases</a>
+                            </li>
+                            <li>
+                                <a href="./artists.html" class="artists">Artists</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Artists</h1>
+        <div class="grid-container">
+            <div>
+                <img class='grid-item grid-item-1' src='./assets/images/cd-cover/big thing/mj116.jpg' alt=''>
+                <p>MJ116</p>
+            </div>
+            <div>
+                <img class='grid-item grid-item-2' src='./assets/images/cd-cover/Fantasia/莫宰羊.jpg' alt=''>
+                <p>莫宰羊</p>
+            </div>
+            <div>
+                <img class='grid-item grid-item-3' src='./assets/images/cd-cover/Outta Body/E.SO.jpg' alt=''>
+                <p>E.SO 瘦子</p>
+            </div>
+            <div>
+                <img class='grid-item grid-item-4' src='./assets/images/cd-cover/PEDESTAL/ozi.jpg' alt=''>
+                <p>ØZI</p>
+            </div>
+            <div>
+                <img class='grid-item grid-item-5' src='/assets/images/cd-cover/phat life/MUTA.jpg' alt=''>
+                <p>MUTA 大淵</p>
+            </div>
+            <div>
+                <img class='grid-item grid-item-6' src='/assets/images/cd-cover/Trout Fresh/Trout Fresh.jpg' alt=''>
+                <p>Trout Fresh 呂士軒</p>
+            </div>
+            <div>
+                <img class='grid-item grid-item-7' src='/assets/images/cd-cover/你所不知道的杜振熙之內部整修/soft lipa.jpg' alt=''>
+                <p>Soft Lipa 蛋堡</p>
+            </div>
+            <div>
+                <img class='grid-item grid-item-8' src='/assets/images/cd-cover/啥款/Kenzy.jpg' alt=''>
+                <p>Kenzy 大春</p>
+            </div>
+            <div>
+                <img class='grid-item grid-item-9' src='/assets/images/cd-cover/夢想成真/bowz.jpg' alt=''>
+                <p>Bowz</p>
+            </div>
+            <div>
+                <img class='grid-item grid-item-10' src='/assets/images/cd-cover/廢物/mchotdog.jpg' alt=''>
+                <p>MC HotDog 熱狗</p>
+            </div>
+            <div>
+                <img class='grid-item grid-item-11' src='/assets/images/cd-cover/裸雀/wannasleep.jpg' alt=''>
+                <p>wannasleep</p>
+            </div>
+            <div>
+                <img class='grid-item grid-item-12' src='/assets/images/cd-cover/電火王/美秀集團.jpg' alt=''>
+                <p>美秀集團</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        let magicGrid = new MagicGrid({
+            container: '.container',
+            animate: true,
+            gutter: 30,
+            static: true,
+            useMin: true
+        });
+
+        magicGrid.listen();
+    </script>
+</body>
+
+</html>
