@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MMXIX</title>
+    <title>Music</title>
     <link rel="stylesheet" href="./css/reset.css">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,8 +22,6 @@
         /* nav */
         .nav .container {
             width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
             margin-right: auto;
             margin-left: auto;
         }
@@ -61,8 +59,6 @@
         /* main */
 
         /* advert-screen */
-
-
         .advert-screen {
             margin: 15px -15px 0 -15px;
             display: flex;
@@ -82,7 +78,7 @@
             width: 100%;
         }
 
-        .advert-screen li {
+        .advert-screen .txt li {
             margin-bottom: 10px;
             margin-left: 13px;
             list-style: decimal;
@@ -93,6 +89,7 @@
             width: 100%;
             object-fit: cover;
             right: 0;
+            margin-bottom: 15px;
         }
 
         /* album-introduction */
@@ -137,6 +134,7 @@
         /* footer */
         .footer {
             text-align: center;
+            line-height: auto;
         }
     </style>
 </head>
@@ -154,10 +152,10 @@
                     <div class="menu">
                         <ul class="menu-list">
                             <li>
-                                <a href="" class="music">Releases</a>
+                                <a href="./index.html" class="music">Releases</a>
                             </li>
                             <li>
-                                <a href="" class="artists">Artists</a>
+                                <a href="./artists.html" class="artists">Artists</a>
                             </li>
                         </ul>
                     </div>
@@ -167,7 +165,7 @@
     </nav>
     <main>
         <div class="advert-screen">
-            <div class="col left">
+            <div class="col-7 left">
                 <div class="img">
                     <ul>
                         <li>
@@ -182,7 +180,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col right">
+            <div class="col-5 right">
                 <div class="txt">
                     <h2>夢想成真</h2>
                     <h4>熊仔&豹子膽</h4>
@@ -234,6 +232,7 @@
                 </div>
             </div>
         </div>
+        <!-- 專輯介紹 -->
         <div class="album-introduction">
             <div class="container">
                 <h3>專輯簡介</h3>
