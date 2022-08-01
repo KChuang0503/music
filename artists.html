@@ -43,6 +43,12 @@
             margin: 0 auto;
         }
 
+        .artist-box {
+            opacity: 0;
+            transform: translateY(100px);
+            transition: .5s;
+        }
+
         main .grid-container div {
             width: 150px;
             margin: 0 3rem 1.5rem 0;
@@ -53,6 +59,7 @@
             /* box-shadow: 5px 5px 5px rgba(26, 29, 31, 0.1); */
             transition: all 0.25s ease-in-out;
         }
+
         main a {
             text-decoration: none;
             color: black;
@@ -78,6 +85,21 @@
             text-align: center;
             font-style: italic;
             font-size: 1rem;
+        }
+
+        #totop {
+            background-color: var(--mydarkblue);
+            color: aliceblue;
+            width: 80px;
+            height: 80px;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
         }
 
         /* slide in the scroll */
@@ -111,91 +133,107 @@
     <main>
         <h1>Artists</h1>
         <div class="grid-container">
-            <div>
+            <div class="artist-box">
                 <img class='grid-item grid-item-1' src='./assets/images/artists/mj116.jpg' alt=''>
                 <p>頑童 MJ116</p>
             </div>
-            <div>
+            <div class="artist-box">
                 <img class='grid-item grid-item-2' src='./assets/images/artists/莫宰羊.jpg' alt=''>
                 <p>莫宰羊</p>
             </div>
-            <div>
+            <div class="artist-box">
                 <img class='grid-item grid-item-3' src='./assets/images/artists/E.SO.jpg' alt=''>
                 <p>E.SO 瘦子</p>
             </div>
-            <div>
+            <div class="artist-box">
                 <img class='grid-item grid-item-4' src='./assets/images/artists/ozi.jpg' alt=''>
                 <p>ØZI</p>
             </div>
-            <div>
+            <div class="artist-box">
                 <img class='grid-item grid-item-5' src='/assets/images/artists/MUTA.jpg' alt=''>
                 <p>MUTA 大淵</p>
             </div>
-            <div>
+            <div class="artist-box">
                 <img class='grid-item grid-item-6' src='/assets/images/artists/Trout Fresh.jpg' alt=''>
                 <p>Trout Fresh 呂士軒</p>
             </div>
-            <div>
+            <div class="artist-box">
                 <img class='grid-item grid-item-7' src='/assets/images/artists/soft lipa.jpg' alt=''>
                 <p>蛋堡 Soft Lipa</p>
             </div>
-            <div>
+            <div class="artist-box">
                 <img class='grid-item grid-item-8' src='/assets/images/artists/Kenzy.jpg' alt=''>
                 <p>大春 Kenzy</p>
             </div>
-            <div>
+            <div class="artist-box">
                 <a href="./artists-bowz.html">
                     <img class='grid-item grid-item-9' src='/assets/images/artists/bowz.jpg' alt='' href="">
                     <p>豹子膽 Bowz(熊仔)</p>
                 </a>
             </div>
-            <div>
+            <div class="artist-box">
                 <img class='grid-item grid-item-10' src='/assets/images/artists/mchotdog.jpg' alt=''>
                 <p>MC HotDog 熱狗</p>
             </div>
-            <div>
+            <div class="artist-box">
                 <img class='grid-item grid-item-11' src='/assets/images/artists/wannasleep.jpg' alt=''>
                 <p>wannasleep</p>
             </div>
-            <div>
+            <div class="artist-box">
                 <img class='grid-item grid-item-12' src='/assets/images/artists/美秀集團.jpg' alt=''>
                 <p>美秀集團</p>
             </div>
-            <div>
+            <div class="artist-box">
                 <img class='grid-item grid-item-12' src='/assets/images/artists/熊仔.jpg' alt=''>
                 <p>熊仔 Kumachan</p>
             </div>
-            <div>
+            <div class="artist-box">
                 <img class='grid-item grid-item-12' src='/assets/images/artists/G5SH.jpg' alt=''>
                 <p>G5SH</p>
             </div>
-            <div>
+            <div class="artist-box">
                 <img class='grid-item grid-item-12' src='/assets/images/artists/multiverse.jpg' alt=''>
                 <p>multiverse</p>
             </div>
-            <div>
+            <div class="artist-box">
                 <img class='grid-item grid-item-12' src='/assets/images/artists/LEO王.jpg' alt=''>
                 <p>LEO王</p>
             </div>
         </div>
+
+        <div id="totop">TOP</div>
     </main>
 
     <footer>
 
     </footer>
 
-
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script>
-        let magicGrid = new MagicGrid({
-            container: '.container',
-            animate: true,
-            gutter: 30,
-            static: true,
-            useMin: true
-        });
+        // scroll to top
+        $('#totop').click(function () {
+            console.log('hi');
+            $('html, body').animate({ scrollTop: 0 }, 2000)
+        })
 
-        magicGrid.listen();
+        // scroll
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= ($('.artist-box').offset().top - $(window).height() * 1 / 2)) {
+                console.log('if');
+                $('.artist-box').css({
+                    opacity: 1,
+                    transform: 'translateY(0px)',
+                })
+            }
+            else {
+                console.log('else');
+                $('.artist-box').css({
+                    opacity: 0,
+                    transform: 'translateY(100px)',
+                })
+            }
+        })
+
     </script>
 </body>
 
