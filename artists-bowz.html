@@ -16,70 +16,94 @@
     <link rel="stylesheet" href="./bootstrap/css/bootstrap-grid.min.css">
     <!-- css -->
     <link rel="stylesheet" href="./css/all-setup.css">
+    <!-- nav css -->
+    <link rel="stylesheet" href="./css/nav.css">
+
 
 
     <style>
-        /* nav */
-        .nav .container {
-            width: 100%;
-            margin-right: auto;
-            margin-left: auto;
-        }
-
-        .nav .row {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-right: -15px;
-            margin-left: -15px;
-        }
-
-        .nav .logo {
-            margin: 15px 0 15px 50px;
-            width: 10%;
-            min-width: 100px;
-        }
-
-        .nav .logo img {
-            width: 100%;
-        }
-
-        /* menu */
-        .menu-list {
-            display: flex;
-            margin: 15px 50px 15px 0;
-        }
-
-        .menu-list a {
-            text-decoration: none;
-            margin: 0 15px;
-            color: var(--myblue);
-        }
-
         /* main */
+        /* artists-intro */
+        .wrap {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .artists-intro .artists-img {
+            aspect-ratio: 32/9;
+            overflow: hidden;
+        }
+
+        .artists-intro .artists-img img {
+            width: 100%;
+        }
+
+        .intro-txt {
+            text-align: center;
+            margin-bottom: 60px;
+            letter-spacing: 5px;
+        }
+
+        /* album-introduction */
+        .album-introduction {
+            position: -webkit-sticky;
+            position: sticky;
+            margin-bottom: 50px;
+        }
+
+        .album-introduction h3 {
+            margin-bottom: 15px;
+        }
+
+        .inner-txt {
+            display: flex;
+        }
+
+        .album-introduction p {
+            line-height: 1.6rem;
+            text-align: justify;
+            white-space: pre-line;
+        }
+
+        /* artists-album */
+        .album-box {
+            width: 100%;
+            text-align: center;
+        }
+        .album-list {
+            width: 100%;
+        }
+
+        .album-img {
+            aspect-ratio: 1/1;
+            overflow: hidden;
+        }
+
+        .album-list img {
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
     <nav>
-        <div class="nav">
-            <div class="container">
-                <div class="row">
-                    <div class="logo">
-                        <a href="./index.html">
-                            <img src="./assets/images/logo.png" alt="">
-                        </a>
-                    </div>
-                    <div class="menu">
-                        <ul class="menu-list">
-                            <li>
-                                <a href="./index.html" class="music">Releases</a>
-                            </li>
-                            <li>
-                                <a href="./artists.html" class="artists">Artists</a>
-                            </li>
-                        </ul>
-                    </div>
+        <div class="container">
+            <div class="nav-box">
+                <div class="logo-box">
+                    <label class="logo">Virtual Music</label>
+                </div>
+                <div class="nav-list">
+                    <ul>
+                        <li>
+                            <a href="./index.html">Releases</a>
+                        </li>
+                        <li>
+                            <a href="./artists.html">Artists</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -87,29 +111,49 @@
 
     <main>
         <div class="artists-intro">
-            <div class="container">
+            <div class="wrap">
                 <div class="artists-img">
-                    <img src="" alt="">
+                    <img src="./assets/images/cd-cover/夢想成真/bowz2.jpg" alt="">
                 </div>
                 <div class="intro-txt">
                     <h2>
-
+                        Bowz
                     </h2>
-                    <p>
-
-                    </p>
                 </div>
-            </div>   
+            </div>
         </div>
+        <!-- 介紹 -->
+        <div class="album-introduction">
+            <div class="container">
+                <div class="inner-txt">
+                    <div class="col-6 col-md-12">
+                        <p>
+                            方序中初次見到的熊仔其實是「豹子膽」（熊仔創造的角色），2018年他以入圍者之姿參加金曲獎頒獎典禮，熊仔以豹子膽身份為「台灣早就有嘻哈」聯演開場，並首度演唱〈走紅毯〉。變化兩種身份的演出型態在台灣並不多見，讓方序中感到相當驚艷，烙下深刻印象，再一次與熊仔見面就是商討專輯裝幀的時候。「熊仔本人很親切、斯文，學歷很狂，但個性並不高傲，我覺得他創造出豹子膽這個角色，有點像在釋放沒有拿出的自己。」<br>
+                            極致，是方序中給熊仔的第二個形容詞。經過實際溝通，他發現熊仔真心想實現並做好艱困的任務，他帶來自己喜歡的漫畫，也清楚表達腦中的各種想像。《夢想成真–豹子膽公式彩蛋設定集》共有兩百多頁，結合書套、專輯資訊、漫畫、CD、藏匿碟片的紙槽等規劃，從材質、厚度、扎實感到視覺，所有細節都精緻地追求漫畫角色設定書的呈現模式。<br>
+                        </p>
+                    </div>
+                    <div class="col-6 col-md-12">
+                        <p>
+                            「有時候事情就是要做得夠極致、催到底，如果不上不下，就會變得有做跟沒做一樣。這是一本漫畫也是一張專輯，包裝以動漫次文化呈現，並加入哲學性思考，每個細節安排都富有意義，內容從網路已經發表的圖文開始整理，在音樂出版都轉向虛擬之際，熊仔又從虛擬變回實體，回歸到閱讀這件事，希望引發不同層次的思考。」<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 專輯 -->
         <div class="artists-album">
-            <h2>
-
-            </h2>
-            <div class="album-list">
-                <div class="album-img">
-                    <a href="">
-                        <img src="" alt="">
-                    </a>
+            <div class="container">
+                <div class="row">
+                    <div class="album-box">
+                        <h3>Releases</h3>
+                        <div class="album-list">
+                            <div class="album-img">
+                                <a href="">
+                                    <img src="./assets/images/cd空間.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

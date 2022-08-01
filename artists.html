@@ -16,6 +16,9 @@
     <link rel="styleshe。et" href="./bootstrap/css/bootstrap-grid.min.css">
     <!-- css -->
     <link rel="stylesheet" href="./css/all-setup.css">
+    <!-- nav css -->
+    <link rel="stylesheet" href="./css/nav.css">
+
 
 
     <style>
@@ -32,37 +35,9 @@
             text-align: center;
         }
 
-        /* nav */
-        .nav .row {
-            justify-content: space-between;
-        }
-
-        .nav .logo {
-            margin: 15px 0 15px 50px;
-            width: 10%;
-            min-width: 100px;
-        }
-
-        .nav .logo img {
-            width: 100%;
-        }
-
-        /* menu */
-        .menu-list {
-            display: flex;
-            margin: 15px 50px 15px 0;
-        }
-
-        .menu-list a {
-            text-decoration: none;
-            margin: 0 15px;
-            color: var(--myblue);
-        }
-
-
         /* main */
         main .grid-container {
-            columns: 4 200px;
+            columns: 3 200px;
             column-gap: 1.5rem;
             width: 80%;
             margin: 0 auto;
@@ -77,6 +52,10 @@
             padding: 5px;
             /* box-shadow: 5px 5px 5px rgba(26, 29, 31, 0.1); */
             transition: all 0.25s ease-in-out;
+        }
+        main a {
+            text-decoration: none;
+            color: black;
         }
 
         main .grid-container div:hover img {
@@ -102,30 +81,28 @@
         }
 
         /* slide in the scroll */
-        
     </style>
 </head>
 
 <body>
     <nav>
-        <div class="nav">
-            <div class="container">
-                <div class="row">
-                    <div class="logo">
-                        <a href="./index.html">
-                            <img src="./assets/images/logo.png" alt="">
-                        </a>
-                    </div>
-                    <div class="menu">
-                        <ul class="menu-list">
-                            <li>
-                                <a href="./index.html" class="Releases">Releases</a>
-                            </li>
-                            <li>
-                                <a href="./artists.html" class="artists">Artists</a>
-                            </li>
-                        </ul>
-                    </div>
+        <div class="container">
+            <div class="nav-box">
+                <div class="logo-box">
+                    <label class="logo">Virtual Music</label>
+                </div>
+                <div class="nav-list">
+                    <ul>
+                        <li>
+                            <a href="./index.html">Releases</a>
+                        </li>
+                        <li>
+                            <a href="./artists.html">Artists</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -135,52 +112,70 @@
         <h1>Artists</h1>
         <div class="grid-container">
             <div>
-                <img class='grid-item grid-item-1' src='./assets/images/cd-cover/big thing/mj116.jpg' alt=''>
-                <p>MJ116</p>
+                <img class='grid-item grid-item-1' src='./assets/images/artists/mj116.jpg' alt=''>
+                <p>頑童 MJ116</p>
             </div>
             <div>
-                <img class='grid-item grid-item-2' src='./assets/images/cd-cover/Fantasia/莫宰羊.jpg' alt=''>
+                <img class='grid-item grid-item-2' src='./assets/images/artists/莫宰羊.jpg' alt=''>
                 <p>莫宰羊</p>
             </div>
             <div>
-                <img class='grid-item grid-item-3' src='./assets/images/cd-cover/Outta Body/E.SO.jpg' alt=''>
+                <img class='grid-item grid-item-3' src='./assets/images/artists/E.SO.jpg' alt=''>
                 <p>E.SO 瘦子</p>
             </div>
             <div>
-                <img class='grid-item grid-item-4' src='./assets/images/cd-cover/PEDESTAL/ozi.jpg' alt=''>
+                <img class='grid-item grid-item-4' src='./assets/images/artists/ozi.jpg' alt=''>
                 <p>ØZI</p>
             </div>
             <div>
-                <img class='grid-item grid-item-5' src='/assets/images/cd-cover/phat life/MUTA.jpg' alt=''>
+                <img class='grid-item grid-item-5' src='/assets/images/artists/MUTA.jpg' alt=''>
                 <p>MUTA 大淵</p>
             </div>
             <div>
-                <img class='grid-item grid-item-6' src='/assets/images/cd-cover/Trout Fresh/Trout Fresh.jpg' alt=''>
+                <img class='grid-item grid-item-6' src='/assets/images/artists/Trout Fresh.jpg' alt=''>
                 <p>Trout Fresh 呂士軒</p>
             </div>
             <div>
-                <img class='grid-item grid-item-7' src='/assets/images/cd-cover/你所不知道的杜振熙之內部整修/soft lipa.jpg' alt=''>
-                <p>Soft Lipa 蛋堡</p>
+                <img class='grid-item grid-item-7' src='/assets/images/artists/soft lipa.jpg' alt=''>
+                <p>蛋堡 Soft Lipa</p>
             </div>
             <div>
-                <img class='grid-item grid-item-8' src='/assets/images/cd-cover/啥款/Kenzy.jpg' alt=''>
-                <p>Kenzy 大春</p>
+                <img class='grid-item grid-item-8' src='/assets/images/artists/Kenzy.jpg' alt=''>
+                <p>大春 Kenzy</p>
             </div>
             <div>
-                <img class='grid-item grid-item-9' src='/assets/images/cd-cover/夢想成真/bowz.jpg' alt=''>
-                <p>豹子膽Bowz(熊仔)</p>
+                <a href="./artists-bowz.html">
+                    <img class='grid-item grid-item-9' src='/assets/images/artists/bowz.jpg' alt='' href="">
+                    <p>豹子膽 Bowz(熊仔)</p>
+                </a>
             </div>
             <div>
-                <img class='grid-item grid-item-10' src='/assets/images/cd-cover/廢物/mchotdog.jpg' alt=''>
+                <img class='grid-item grid-item-10' src='/assets/images/artists/mchotdog.jpg' alt=''>
                 <p>MC HotDog 熱狗</p>
             </div>
             <div>
-                <img class='grid-item grid-item-11' src='/assets/images/cd-cover/裸雀/wannasleep.jpg' alt=''>
+                <img class='grid-item grid-item-11' src='/assets/images/artists/wannasleep.jpg' alt=''>
                 <p>wannasleep</p>
             </div>
             <div>
-                <img class='grid-item grid-item-12' src='/assets/images/cd-cover/電火王/美秀集團.jpg' alt=''>
+                <img class='grid-item grid-item-12' src='/assets/images/artists/美秀集團.jpg' alt=''>
                 <p>美秀集團</p>
+            </div>
+            <div>
+                <img class='grid-item grid-item-12' src='/assets/images/artists/熊仔.jpg' alt=''>
+                <p>熊仔 Kumachan</p>
+            </div>
+            <div>
+                <img class='grid-item grid-item-12' src='/assets/images/artists/G5SH.jpg' alt=''>
+                <p>G5SH</p>
+            </div>
+            <div>
+                <img class='grid-item grid-item-12' src='/assets/images/artists/multiverse.jpg' alt=''>
+                <p>multiverse</p>
+            </div>
+            <div>
+                <img class='grid-item grid-item-12' src='/assets/images/artists/LEO王.jpg' alt=''>
+                <p>LEO王</p>
             </div>
         </div>
     </main>

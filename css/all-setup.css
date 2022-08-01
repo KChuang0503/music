@@ -16,7 +16,8 @@
     /* 標準顏色 */
     --bgcolor: #F5EDDC;
     --myblue: #3951A2;
-    --myyelloow: #F3CD54;
+    --mydarkblue:#2c3e50;
+    --myyellow: #F3CD54;
     --mypink: #EB9EAE;
 }
 
@@ -80,6 +81,6 @@ h4 {
 }
 
 p {
-    font-size: 11px;
+    font-size: 13px;
     margin-bottom: 10px;
 }

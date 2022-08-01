@@ -16,34 +16,12 @@
     <link rel="stylesheet" href="./bootstrap/css/bootstrap-grid.min.css">
     <!-- css -->
     <link rel="stylesheet" href="./css/all-setup.css">
+    <!-- nav css -->
+    <link rel="stylesheet" href="./css/nav.css">
+
 
 
     <style>
-        /* nav */
-        .nav .container {
-            width: 100%;
-            margin-right: auto;
-            margin-left: auto;
-        }
-
-        .nav .row {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-right: -15px;
-            margin-left: -15px;
-        }
-
-        .nav .logo {
-            margin: 15px 0 15px 50px;
-            width: 10%;
-            min-width: 100px;
-        }
-
-        .nav .logo img {
-            width: 100%;
-        }
-
         /* menu */
         .menu-list {
             display: flex;
@@ -141,24 +119,23 @@
 
 <body>
     <nav>
-        <div class="nav">
-            <div class="container">
-                <div class="row">
-                    <div class="logo">
-                        <a href="./index.html">
-                            <img src="./assets/images/logo.png" alt="">
-                        </a>
-                    </div>
-                    <div class="menu">
-                        <ul class="menu-list">
-                            <li>
-                                <a href="./index.html" class="music">Releases</a>
-                            </li>
-                            <li>
-                                <a href="./artists.html" class="artists">Artists</a>
-                            </li>
-                        </ul>
-                    </div>
+        <div class="container">
+            <div class="nav-box">
+                <div class="logo-box">
+                    <label class="logo">Virtual Music</label>
+                </div>
+                <div class="nav-list">
+                    <ul>
+                        <li>
+                            <a href="./index.html">Releases</a>
+                        </li>
+                        <li>
+                            <a href="./artists.html">Artists</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
