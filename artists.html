@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music</title>
+    <title>Virtual Music</title>
     <link rel="stylesheet" href="./css/reset.css">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,20 +22,12 @@
 
 
     <style>
-        /* body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            font-family: sans-serif;
-        } */
-
-        h1 {
-            color: var(--myblue);
+        /* main */
+        h2 {
+            color: rgb(55, 55, 55);
             text-align: center;
         }
 
-        /* main */
         main .grid-container {
             columns: 3 200px;
             column-gap: 1.5rem;
@@ -43,20 +35,12 @@
             margin: 0 auto;
         }
 
-        .artist-box {
-            opacity: 0;
-            transform: translateY(100px);
-            transition: .5s;
-        }
-
         main .grid-container div {
             width: 150px;
             margin: 0 3rem 1.5rem 0;
             display: inline-block;
             width: 100%;
-            /* border: solid 2px black; */
             padding: 5px;
-            /* box-shadow: 5px 5px 5px rgba(26, 29, 31, 0.1); */
             transition: all 0.25s ease-in-out;
         }
 
@@ -65,21 +49,21 @@
             color: black;
         }
 
-        main .grid-container div:hover img {
+        .grid-container .artist-box:hover img {
             filter: grayscale(0);
         }
 
-        main .grid-container div:hover {
+        .grid-container .artist-box:hover {
             border-color: coral;
         }
 
-        main .grid-container div img {
+        .grid-container .artist-box img {
             width: 100%;
             filter: grayscale(100%);
             transition: all 0.5s ease-in-out;
         }
 
-        main .grid-container div p {
+        .grid-container div p {
             margin: 25px 0;
             padding: 0;
             text-align: center;
@@ -87,11 +71,17 @@
             font-size: 1rem;
         }
 
+        .hideme {
+            transform: translateY(30%);
+            opacity: 0;
+            transition: .5s;
+        }
+
         #totop {
             background-color: var(--mydarkblue);
             color: aliceblue;
-            width: 80px;
-            height: 80px;
+            width: 50px;
+            height: 50px;
             position: fixed;
             right: 10px;
             bottom: 10px;
@@ -100,6 +90,13 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
+        }
+
+        @media screen and (min-width: 961px) {
+            #totop {
+                width: 70px;
+                height: 70px;
+            }
         }
 
         /* slide in the scroll */
@@ -121,9 +118,6 @@
                         <li>
                             <a href="./artists.html">Artists</a>
                         </li>
-                        <li>
-                            <a href="#">About</a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -131,74 +125,104 @@
     </nav>
 
     <main>
-        <h1>Artists</h1>
+        <h2>Artists</h2>
         <div class="grid-container">
             <div class="artist-box">
-                <img class='grid-item grid-item-1' src='./assets/images/artists/mj116.jpg' alt=''>
-                <p>頑童 MJ116</p>
+                <a href="">
+                    <img class='grid-item grid-item-1' src='./assets/images/artists/mj116.jpg' alt=''>
+                    <p>頑童 MJ116</p>
+                </a>
+            </div>
+            <div class="artist-box hideme">
+                <a href="">
+                    <img class='grid-item grid-item-2' src='./assets/images/artists/莫宰羊.jpg' alt=''>
+                    <p>莫宰羊</p>
+                </a>
+            </div>
+            <div class="artist-box hideme">
+                <a href="">
+                    <img class='grid-item grid-item-3' src='./assets/images/artists/E.SO.jpg' alt=''>
+                    <p>E.SO 瘦子</p>
+                </a>
+            </div>
+            <div class="artist-box hideme">
+                <a href="">
+                    <img class='grid-item grid-item-4' src='./assets/images/artists/ozi.jpg' alt=''>
+                    <p>ØZI</p>
+                </a>
+            </div>
+            <div class="artist-box hideme">
+                <a href="">
+                    <img class='grid-item grid-item-5' src='/assets/images/artists/MUTA.jpg' alt=''>
+                    <p>MUTA 大淵</p>
+                </a>
             </div>
             <div class="artist-box">
-                <img class='grid-item grid-item-2' src='./assets/images/artists/莫宰羊.jpg' alt=''>
-                <p>莫宰羊</p>
+                <a href="./artists-troutfresh.html">
+                    <img class='grid-item grid-item-6' src='/assets/images/artists/troutfresh/Trout Fresh.jpg' alt=''>
+                    <p>Trout Fresh 呂士軒</p>
+                </a>
             </div>
-            <div class="artist-box">
-                <img class='grid-item grid-item-3' src='./assets/images/artists/E.SO.jpg' alt=''>
-                <p>E.SO 瘦子</p>
+            <div class="artist-box hideme">
+                <a href="">
+                    <img class='grid-item grid-item-7' src='/assets/images/artists/soft lipa.jpg' alt=''>
+                    <p>蛋堡 Soft Lipa</p>
+                </a>
             </div>
-            <div class="artist-box">
-                <img class='grid-item grid-item-4' src='./assets/images/artists/ozi.jpg' alt=''>
-                <p>ØZI</p>
+            <div class="artist-box hideme">
+                <a href="">
+                    <img class='grid-item grid-item-8' src='/assets/images/artists/Kenzy.jpg' alt=''>
+                    <p>大春 Kenzy</p>
+                </a>
             </div>
-            <div class="artist-box">
-                <img class='grid-item grid-item-5' src='/assets/images/artists/MUTA.jpg' alt=''>
-                <p>MUTA 大淵</p>
-            </div>
-            <div class="artist-box">
-                <img class='grid-item grid-item-6' src='/assets/images/artists/Trout Fresh.jpg' alt=''>
-                <p>Trout Fresh 呂士軒</p>
-            </div>
-            <div class="artist-box">
-                <img class='grid-item grid-item-7' src='/assets/images/artists/soft lipa.jpg' alt=''>
-                <p>蛋堡 Soft Lipa</p>
-            </div>
-            <div class="artist-box">
-                <img class='grid-item grid-item-8' src='/assets/images/artists/Kenzy.jpg' alt=''>
-                <p>大春 Kenzy</p>
-            </div>
-            <div class="artist-box">
+            <div class="artist-box hideme">
                 <a href="./artists-bowz.html">
                     <img class='grid-item grid-item-9' src='/assets/images/artists/bowz.jpg' alt='' href="">
                     <p>豹子膽 Bowz(熊仔)</p>
                 </a>
             </div>
+            <div class="artist-box hideme">
+                <a href="">
+                    <img class='grid-item grid-item-10' src='/assets/images/artists/mchotdog.jpg' alt=''>
+                    <p>MC HotDog 熱狗</p>
+                </a>
+            </div>  
             <div class="artist-box">
-                <img class='grid-item grid-item-10' src='/assets/images/artists/mchotdog.jpg' alt=''>
-                <p>MC HotDog 熱狗</p>
+                <a href="">
+                    <img class='grid-item grid-item-11' src='/assets/images/artists/wannasleep.jpg' alt=''>
+                    <p>wannasleep</p>
+                </a>
             </div>
-            <div class="artist-box">
-                <img class='grid-item grid-item-11' src='/assets/images/artists/wannasleep.jpg' alt=''>
-                <p>wannasleep</p>
+            <div class="artist-box hideme">
+                <a href="">
+                    <img class='grid-item grid-item-12' src='/assets/images/artists/美秀集團.jpg' alt=''>
+                    <p>美秀集團</p>
+                </a>
             </div>
-            <div class="artist-box">
-                <img class='grid-item grid-item-12' src='/assets/images/artists/美秀集團.jpg' alt=''>
-                <p>美秀集團</p>
+            <div class="artist-box hideme">
+                <a href="">
+                    <img class='grid-item grid-item-12' src='/assets/images/artists/熊仔.jpg' alt=''>
+                    <p>熊仔 Kumachan</p>
+                </a>
             </div>
-            <div class="artist-box">
-                <img class='grid-item grid-item-12' src='/assets/images/artists/熊仔.jpg' alt=''>
-                <p>熊仔 Kumachan</p>
+            <div class="artist-box hideme">
+                <a href="">
+                    <img class='grid-item grid-item-12' src='/assets/images/artists/G5SH.jpg' alt=''>
+                    <p>G5SH</p>
+                </a>
             </div>
-            <div class="artist-box">
-                <img class='grid-item grid-item-12' src='/assets/images/artists/G5SH.jpg' alt=''>
-                <p>G5SH</p>
+            <div class="artist-box hideme">
+                <a href="">
+                    <img class='grid-item grid-item-12' src='/assets/images/artists/multiverse.jpg' alt=''>
+                    <p>multiverse</p>
+                </a>
             </div>
-            <div class="artist-box">
-                <img class='grid-item grid-item-12' src='/assets/images/artists/multiverse.jpg' alt=''>
-                <p>multiverse</p>
-            </div>
-            <div class="artist-box">
-                <img class='grid-item grid-item-12' src='/assets/images/artists/LEO王.jpg' alt=''>
-                <p>LEO王</p>
-            </div>
+            <a href="">
+                <div class="artist-box hideme">
+                    <img class='grid-item grid-item-12' src='/assets/images/artists/LEO王.jpg' alt=''>
+                    <p>LEO王</p>
+            </a>
+        </div>
         </div>
 
         <div id="totop">TOP</div>
@@ -212,27 +236,33 @@
     <script>
         // scroll to top
         $('#totop').click(function () {
-            console.log('hi');
             $('html, body').animate({ scrollTop: 0 }, 2000)
         })
 
         // scroll
-        $(window).scroll(function () {
-            if ($(window).scrollTop() >= ($('.artist-box').offset().top - $(window).height() * 1 / 2)) {
-                console.log('if');
-                $('.artist-box').css({
-                    opacity: 1,
-                    transform: 'translateY(0px)',
-                })
-            }
-            else {
-                console.log('else');
-                $('.artist-box').css({
-                    opacity: 0,
-                    transform: 'translateY(100px)',
-                })
-            }
-        })
+        $(document).ready(function () {
+
+            $(window).scroll(function () {
+
+                $('.hideme').each(function (i) {
+
+                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                    if (bottom_of_window > bottom_of_object) {
+
+                        $(this).css({ 
+                            opacity : 1,
+                            transform: 'translateY(30%)',
+                         });
+
+                    }
+
+                });
+
+            });
+
+        });
 
     </script>
 </body>

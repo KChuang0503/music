@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music</title>
+    <title>Virtual Music</title>
     <link rel="stylesheet" href="./css/reset.css">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="./css/all-setup.css">
     <!-- nav css -->
     <link rel="stylesheet" href="./css/nav.css">
-
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
     <style>
@@ -44,6 +45,14 @@
             margin-bottom: 120px;
         }
 
+        .advert-screen .left,
+        .advert-screen .right {
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
         .advert-screen .txt {
             padding: 20px 0 0 20px;
             position: -webkit-sticky;
@@ -63,12 +72,56 @@
             font-size: 11px;
         }
 
+        button {
+            margin: 50px 0 0 0 ;
+            background-color: rgba(240, 248, 255, 0);
+            font-size: 1.2rem;
+        }
+
         .advert-screen img {
             width: 100%;
             object-fit: cover;
             right: 0;
             margin-bottom: 15px;
         }
+
+        @media screen and (min-width: 361px) {
+
+            .advert-screen .left,
+            .advert-screen .right {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media screen and (min-width: 641px) {
+
+            .advert-screen .left,
+            .advert-screen .right {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+
+        }
+
+        @media screen and (min-width: 961px) {
+
+            .advert-screen .left,
+            .advert-screen .right {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media screen and (min-width: 1281px) {
+
+            .advert-screen .left,
+            .advert-screen .right {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
 
         /* album-introduction */
         .album-introduction {
@@ -100,7 +153,8 @@
         @media screen and (min-width: 361px) {
 
             .album-introduction .txt,
-            .artists .txt,.artists .img {
+            .artists .txt,
+            .artists .img {
                 flex: 0 0 100%;
                 max-width: 100%;
             }
@@ -110,7 +164,8 @@
         @media screen and (min-width: 641px) {
 
             .album-introduction .txt,
-            .artists .txt,.artists .img {
+            .artists .txt,
+            .artists .img {
                 flex: 0 0 100%;
                 max-width: 100%;
             }
@@ -124,7 +179,8 @@
             }
 
             .album-introduction .txt,
-            .artists .txt,.artists .img {
+            .artists .txt,
+            .artists .img {
                 flex: 0 0 50%;
                 max-width: 50%;
             }
@@ -138,7 +194,8 @@
             }
 
             .album-introduction .txt,
-            .artists .txt,.artists .img {
+            .artists .txt,
+            .artists .img {
                 flex: 0 0 50%;
                 max-width: 50%;
             }
@@ -173,6 +230,28 @@
             text-align: center;
             line-height: auto;
         }
+
+        #totop {
+            background-color: var(--mydarkblue);
+            color: aliceblue;
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        @media screen and (min-width: 961px) {
+            #totop {
+                width: 70px;
+                height: 70px;
+            }
+        }
     </style>
 </head>
 
@@ -191,21 +270,22 @@
                         <li>
                             <a href="./artists.html">Artists</a>
                         </li>
-                        <li>
-                            <a href="#">About</a>
-                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
+
     <main>
         <div class="advert-screen">
-            <div class="col-7 left">
+            <div class="left">
                 <div class="img">
                     <ul>
                         <li>
                             <img src="./assets/images/cd-cover/夢想成真/cover.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./assets/images/cd-cover/夢想成真/CD-3D.jpg" alt="">
                         </li>
                         <li>
                             <img src="./assets/images/cd-cover/夢想成真/cover2.jpg" alt="">
@@ -216,7 +296,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-5 right">
+            <div class="right">
                 <div class="txt">
                     <h2>夢想成真</h2>
                     <h4>熊仔&豹子膽</h4>
@@ -265,6 +345,10 @@
                             <p>真 Liberation</p>
                         </li>
                     </ul>
+                    <button>
+                        <i class="fa-brands fa-spotify">spotify</i>
+                    </button>
+                    <button>KKBOX</button>
                 </div>
             </div>
         </div>
@@ -313,12 +397,22 @@
                 </div>
             </div>
         </div>
+        <div id="totop">TOP</div>
     </main>
     <footer>
         <div class="footer">
             <p> &copy; 2022 Music </p>
         </div>
     </footer>
+
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        // scroll to top
+        $('#totop').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 2000)
+        })
+    </script>
 </body>
 
 </html>
