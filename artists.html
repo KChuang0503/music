@@ -103,7 +103,11 @@
             }
         }
 
-        /* slide in the scroll */
+        /* footer */
+        .footer {
+            text-align: center;
+            line-height: auto;
+        }
     </style>
 </head>
 
@@ -233,7 +237,9 @@
     </main>
 
     <footer>
-
+        <div class="footer">
+            <p> &copy; 2022 Music </p>
+        </div>
     </footer>
 
     <script src="./js/jquery-3.6.0.min.js"></script>
@@ -256,9 +262,9 @@
                     if (bottom_of_window > bottom_of_object) {
 
                         $(this).css({
-                            opacity : 1,
+                            opacity: 1,
                             transform: 'translateY(30%)',
-                         });
+                        });
 
                     }
 
